@@ -2,6 +2,6 @@ Title: Bioinformatics: some easy wins and a roadmap to competency.
 
 There are some concepts which are essential for building bioinformatic skills but which are rarely covered - or mentioned - in a biology degree. These are file systems, working directories, paths and computational workflow, and not knowing about them makes learning any bioinformatics really hard! In this talk I will explain what these are before giving you an overview of the core ideas and key steps which are common to a variety of bioinformatic analyses. Finally, I'll share some tips and resources for competency.
 
-0 to 45 minutes talk based on your knowledge of bioinformatics for people who don’t use bioinformatics tools regularly but will need it with the progress of their PhD.
+30 to 45 minutes talk based on your knowledge of bioinformatics for people who don’t use bioinformatics tools regularly but will need it with the progress of their PhD.
 
 talk about your specific research or any tool you consider significant to learn about.

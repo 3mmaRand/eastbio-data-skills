@@ -1,0 +1,74 @@
+---
+title: "Bioinformatics: some easy wins and a roadmap to competency"
+author: "Emma Rand, University of York"
+format:
+  revealjs: 
+    theme: [simple, emma.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    footer: <https://bit.ly/3mma-bio-pkg>
+    margin: 0.07
+    code-link: true
+execute:
+  echo: true
+  eval: false
+bibliography: references.bib
+---
+
+## Summary
+
+- who am i
+
+- background
+
+- no one wants to learn to code
+
+
+There are some concepts which are essential for building bioinformatic skills but which are rarely covered - or mentioned - in a biology degree. 
+-   file systems, 
+-   working directories, paths and 
+-   computational workflow, 
+
+and not knowing about them makes learning any bioinformatics really hard! In this talk I will explain what these are before giving you an overview of the core ideas and key steps which are common to a variety of bioinformatic analyses. Finally, I'll share some tips and resources for competency.
+
+## Learning Objectives {.smaller}
+
+by the end of this session you will able to:
+
+
+
+
+
+
+## Be nice to future you
+
+![Future self: CC-BY-NC, by Julen Colomb, derived from Randall Munroe cartoon](images/future_you.png){fig-alt="Person working at a computer with an offstage person asking \"How is the analysis going?\" The person at the computer replies \"Can't understand the data...and the data collector does not answer my emails or calls\" Person offstage: \"That's terrible! So cruel! Who did collect the data? I will sack them!\" Person at the computer: \"um...I did, 3 years ago\""}
+
+## To avoid
+
+<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p>
+
+<a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a>
+
+</p>
+
+
+
+## End
+
+
+Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
+
+
+## Summary {.smaller}
+
+
+
+## References {.smaller}
