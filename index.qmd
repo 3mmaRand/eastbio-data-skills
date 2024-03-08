@@ -4,7 +4,7 @@ subtitle: "Some easy wins and a roadmap to competency"
 author: "Emma Rand, University of York"
 format:
   revealjs: 
-    theme: [simple, emma.scss]
+    # theme: [simple, emma.scss]
     slide-number: true
     chalkboard: true
     preview-links: auto
@@ -12,8 +12,8 @@ format:
     margin: 0.07
     code-link: true
 execute:
-  echo: true
-  eval: false
+  echo: false
+  eval: true
 bibliography: references.bib
 ---
 
@@ -25,67 +25,64 @@ bibliography: references.bib
 
 -   About you
 
+-   Easy wins
+
 -   Key, often untaught, concepts
 
 -   Roadmap to competency
-
 
 # About me
 
 ## About me
 
--   Senior Lecture in Department of Biology, University of York  
+::: incremental
+-   Senior Lecture in Department of Biology, University of York
 
--   Data Science and reproducibility in the Biosciences: especially 'omics
+-   Data Science and reproducibility in the Biosciences: especially
+    'omics
 
--   [Software Sustainability Institute](https://www.software.ac.uk/) Fellow  
+-   [Software Sustainability Institute](https://www.software.ac.uk/)
+    Fellow
 
 -   [R Forwards](https://forwards.github.io/) Core team
 
--   Project lead [Cloud-SPAN](https://cloud-span.york.ac.uk/) 
+-   Project lead [Cloud-SPAN](https://cloud-span.york.ac.uk/)
 
-![R Forwards](images/rforwards.png){fig-alt="logo for R Forwards" width=200px}
-![Cloud-SPAN](images/transparent-cloud-only.PNG){fig-alt="Cloud-SPAN"  width=350px}
-
-
-
+![R Forwards](images/rforwards.png){fig-alt="logo for R Forwards"
+width="150px"}
+![Cloud-SPAN](images/transparent-cloud-only.PNG){fig-alt="Cloud-SPAN"
+width="250px"}
+:::
 
 ## About me
 
--   Teach data analysis and reproducibility in analytic pipelines predominantly to those who do not see themselves as programmers
+::: incremental
+-   Teach data analysis and reproducibility in analytic pipelines
+    predominantly to those who do not see themselves as programmers
 
--   Training Early Career Researchers  
+-   Training Early Career Researchers
 
 -   Encourage people to code
 
 -   Promote programming competence as learned, not innate
-
-
-
-
+:::
 
 # Why script?
 
+## Reproducibility is key!
+
+-   *"... obtaining consistent results using the same input data;
+    computational steps, methods, and code; and conditions of
+    analysis."*. [@nationalacademiesofsciences2019]
+
+Also see
+
+-   The Turing Way "Definitions for Reproducibility" [@community2022]
 
 ## Reproducibility is key!
 
-
--   *"... obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis."*. [@nationalacademiesofsciences2019]
-
-Also see 
-
--   The Turing Way "Definitions for Reproducibility"  [@community2022]
-
-
-
-## Reproducibility is key!
-
-
-[![The Turing Way\'s definitions of reproducible research
-](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"}](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
-
-
-
+[![The Turing Way's definitions of reproducible
+research](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"}](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
 
 ## You are your first collaborator!
 
@@ -93,9 +90,9 @@ Also see
 Colomb](images/future_you.png){fig-alt="Person working at a computer with an offstage person asking 'How is the analysis going?' The person at the computer replies 'Can't understand the date...and the data collector does not answer my emails or calls' Person offstage: 'That's terrible! So cruel! Who did collect the data? I will sack them!' Person at the computer: 'um...I did, 3 years ago.'"
 width="400"}
 
-
 ## Why does it matter?
 
+::: incremental
 -   Five selfish reasons to work reproducibly [@markowetz2015].
     Alternatively, see the very entertaining
     [talk](https://youtu.be/yVT07Sukv9Q)
@@ -106,24 +103,30 @@ width="400"}
 -   **Will** become standard in Science and publishing e.g OECD Global
     Science Forum Building digital workforce capacity and skills for
     data-intensive science [@oecdglobalscienceforum2020]
+:::
 
 ## It's science!
 
-<iframe src="https://giphy.com/embed/qCj1NK1rxtnna" width="650" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/transparent-qCj1NK1rxtnna">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/qCj1NK1rxtnna" width="650" height="270" frameBorder="0" class="giphy-embed" allowFullScreen>
+
+</iframe>
+
+<p><a href="https://giphy.com/gifs/transparent-qCj1NK1rxtnna">via
+GIPHY</a></p>
 
 ## Be nice to future you!
 
+<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="650" height="277" frameBorder="0" class="giphy-embed" allowFullScreen>
 
-<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="650" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a></p>
+</iframe>
 
-  
+<p><a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a></p>
 
 ## About you!
 
 Go to https://www.menti.com/ and enter code 2172 3625
 
-
-![QR code](images/mentimeter_qr_code_1.png){}
+![QR code](images/mentimeter_qr_code_1.png)
 
 ## You are not alone!
 
@@ -131,34 +134,30 @@ Expectations of Stage 1 Biologists about Data Analysis.
 
 Responses to the question *"I will enjoy data analysis"*
 
-![Likert response](images/enjoy_2018.png){fig-alt="figure for a likert scale question, with the options: Definitely Disagree, Probably Disagree, Neutral, Probably Agree, Definitely Agree. 70% of responses Definitely or Probably Disagree categories. 16% are nuetral"}
-
-
+![Likert
+response](images/enjoy_2018.png){fig-alt="figure for a likert scale question, with the options: Definitely Disagree, Probably Disagree, Neutral, Probably Agree, Definitely Agree. 70% of responses Definitely or Probably Disagree categories. 16% are nuetral"}
 
 ## You are not alone!
 
-
 "*Nobody wants to learn to code. They just want to kick ass*."
 
-
-![James Long rstudio::conf 2019. Putting empathy in action Building a 'community of practice' for analytics in a global corporation.](images/james-long.png){fig-alt="Picture of James with a beard and wearing a cap"}
-
-
-
-
-
-
-
+![James Long rstudio::conf 2019. Putting empathy in action Building a
+'community of practice' for analytics in a global
+corporation.](images/james-long.png){fig-alt="Picture of James with a beard and wearing a cap"}
 
 ## I don't do *any* coding...
 
+. . .
 
-..and I'm not about to start!
+.and I'm not about to start!
 
-
+. . .
 
 You can still make steps towards reproducibility
 
+## Easy wins
+
+::: incremental
 -   Organise your data [@JSSv059i10; @Broman2018-vt]
 
 -   Describe your data with metadata
@@ -166,23 +165,100 @@ You can still make steps towards reproducibility
 -   Use a Project-oriented workflow with file and folder structure
 
 -   Name things carefully
+:::
 
 ## Organise your data
+
+
+-   Use Tidy format  [@JSSv059i10]
+
+    -   variables in column and observations in rows.
+
+    -   One observation per row. 
+
+    -   One thing per cell
+    
+    -   Rectangular
+
+## 
+
+E.g., 40 measurements of interorbital width (in mm) for two populations of domestic pigeons measured to the nearest 0.1mm
+
+![Interorbital width is the distance between the eyes](images/interorbital.png){fig-alt="Photo of a domestic pigeon, head on, with an arrow showing the distance between the eyes."} 
+
+##  Not Tidy
+```{r}
+
+pigeons <- readr::read_table("data-raw/pigeon.txt")
+```
+
+
+
+```{r}
+
+knitr::kable(pigeons) |>
+ kableExtra::kable_styling() |>
+  kableExtra::scroll_box(height = "200px")
+```
+
+-   not clear what the columns are
+
+-   makes it look like there is a relationship between pairs of values
+
+
+## Tidy
+
+```{r}
+#| echo: false
+pigeons |> 
+  tidyr::pivot_longer(cols = everything(),
+               names_to = "population",
+               values_to = "distance") |> 
+knitr::kable() |> 
+  kableExtra::kable_styling() |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+
+#  Tidy data
+
+
+Easier to summarise, analyse and plot because the organisation matches the conceptual structure of the data:
+
+-   it is more obvious what the variables are 
+
+-   it is more obvious that there is no relationship between any of the pigeons 
+
+-   functions are designed to work with variables in columns
 
 
 
 ## Metadata
 
 
+-   data about data
+
+-   what the data files are
+
+-   relationship between file and treatments
+
+-   what the variables are
 
 ## Project-oriented workflow
 
+::: incremental
 -   use folders to organise your work
 
 -   you are aiming for structured, systematic and repeatable.
 
 -   inputs and outputs should be clearly identifiable from structure
     and/or naming
+    
+-   Have a readme file that gives an overview of the project
+    
+-   E.g., RStudio Projects
+
+:::
 
 ## Example
 
@@ -206,13 +282,18 @@ https://xkcd.com/1459/](images/xkcd-comic-file-names.png){fig-alt="A comic figur
 
 Guiding principle - Have a convention! Good file names are:
 
+::: incremental
+
 -   machine readable
 
 -   human readable
 
 -   play nicely with sorting
+:::
 
 ## I suggest
+
+::: incremental
 
 -   no spaces in names
 
@@ -229,7 +310,9 @@ Guiding principle - Have a convention! Good file names are:
 
 -   write down your conventions
 
-##
+:::
+
+## 
 
 ```         
 -- liver_transcriptome/
@@ -260,18 +343,124 @@ Guiding principle - Have a convention! Good file names are:
       |__02_volcano_donor_1_vs_donor_3.eps
 ```
 
+## I don't do *any* coding...
+
+. . .
+
+... but I might want to to start
+
+. . .
+
+There are some key, but often untaught, concepts
+
+
+
+# Key, often untaught, concepts
+
+## About you!
+
+Go to https://www.menti.com/ and enter code 2172 3625
+
+![QR code](images/mentimeter_qr_code_1.png)
+
+
+## File systems
+
+-   A file system is made up of files and directories organised in a hierarchical way.
+
+-   Directory is the old word for folder but commands that act on folders in most programming languages and environments reflect this history
+
+## File systems
+
+![A file hierarchy containing 4 levels of folders and files. Figure adapted from [@randemma2022]. ](images/file-system.png){#fig-file-system fig-alt="At the top level there is a directory called home/; Inside home/ are two directories (docs/ and programs/) and two files doc1.txt and image.jpg. Inside docs/ there is a file called doc2.txt and a directory called data/ which contains doc3.txt and doc4.txt. Inside programs/ are three .exe files"}
+
+
+## Root and home directories
+
+![The hierarchy from the root. The top level is `C:\` in Windows and `/` in Mac. Below that is the Users directory which has a folder for each user. Your home directory is named with your username inside the Users folder. Figure adapted from [@randemma2022].](images/file-system-root.png){#fig-file-system-root fig-alt="The hierarchy from the root - the top level is C: in Windows and / in Mac. Below that is the Users directory which has a folder for each user. Your home directory is named with your username inside the Users folder."}
+
+## Working directory
+
+-   The working directory of a program is the default location a program is using. 
+
+-   where the program will read and write files by default. 
+
+-   You have only one working directory at a time. 
+
+-   'working directory', 'current working directory' and 'current directory' all mean the same thing.
+
+## File Paths
+
+-   location of a file or directory
+
+-   Paths appear in the address bar of your browser or file manager
+
+-   We need to know a file path whenever we want to read, write or refer to a file using code rather than interactively pointing and clicking to navigate. 
+
+## File Paths
+
+-   In a file path, each directory is represented as a separate component separated by a backslash`\`  or a forward slash `/`. 
+
+-   Most systems use forward slashes but Windows uses backslashes[^file_systems-1] 
+
+[^file_systems-1]: Windows uses backslashes because it did not have directories in 1981 when it's predecessor, MS DOS, was released. At the time it used the `/` character for 'switches' (instead of the existing convention `-` ) so when it did start using directories it couldn't use `/`
+
+A path can be **absolute** or **relative** depending on the starting point.
+
+## Absolute paths
+
+-   An Absolute path contains the complete list of directories needed to locate a file on your computer from the root. 
+
+-   For example, the absolute path for the file called `doc3.txt` in the file system above would be `/Users/user1/docs/data/doc3.txt` on Mac and `C:\Users\user1\docs\data\doc3.txt` on Windows. 
+
+## Relative paths
+
+A relative path gives the location of a filesystem object *relative* to the working directory. Whenever the file you want to reference is in the working directory you can use just its name but if it is in a different folder you need to give the relative path. Some examples:
+
+-   if your working directory was `docs`, the relative path for `doc3.txt` would be `data/doc3.txt`.
+
+-   if your working directory was `docs` the relative path for `abe.exe` files would be `../programs/abe.exe`.
+
+`../` allows you to look in the directory above the working directory and `../..` allows you to look in the directory two levels above the working directory and so on.
+
+## 
+
+![The hierarchy from the root. Figure adapted from [@randemma2022].](images/file-system-root.png){#fig-file-system-root fig-alt="The hierarchy from the root - the top level is C: in Windows and / in Mac. Below that is the Users directory which has a folder for each user. Your home directory is named with your username inside the Users folder."}
+
+## Use relative paths
+
+-   Most of the time you should use relative paths because that makes your work portable. 
+
+-   You only need to use absolute paths when you are referring to filesystem outside the one you are using.
+
+## What they forgot to teach you about computers
+
+Computational Analysis for Bioscientists [@Rand_Computational_Analysis_for_2023]
+
+[Quiz](https://shiny.york.ac.uk/er13/prenomics-quiz/#section-some-general-questions)
 
 ## Summary
+
+
+-   Reproducibility matters, especially to future you
+
+-   Scripting makes your work more reproducible because everything is written down
+
+-   But...  You don't have to learn to code to make steps towards reproducibility
+
+-   Understanding file systems, working directories and paths is key for learning to code
+
+
 
 ## 
 
 -   Made with R [@R-core], Quarto [@allaire2022], `knitr` [@knitr],
-`kableExtra` [@kableExtra]
+    `kableExtra` [@kableExtra]
 
--   Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+-   Licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+    Commons Attribution-NonCommercial-ShareAlike 4.0 International
+    License</a>.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
 
-
-
-
-## References 
+## References
