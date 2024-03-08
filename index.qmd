@@ -415,7 +415,7 @@ A path can be **absolute** or **relative** depending on the starting point.
 
 ## Relative paths
 
-A relative path gives the location of a filesystem object *relative* to the working directory. Whenever the file you want to reference is in the working directory you can use just its name but if it is in a different folder you need to give the relative path. Some examples:
+A relative path gives the location of a filesystem object *relative* to the working directory. 
 
 -   if your working directory was `docs`, the relative path for `doc3.txt` would be `data/doc3.txt`.
 
