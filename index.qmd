@@ -1,5 +1,6 @@
 ---
-title: "Bioinformatics: some easy wins and a roadmap to competency"
+title: "Bioinformatics:"
+subtitle: "Some easy wins and a roadmap to competency"
 author: "Emma Rand, University of York"
 format:
   revealjs: 
@@ -7,7 +8,7 @@ format:
     slide-number: true
     chalkboard: true
     preview-links: auto
-    footer: <https://bit.ly/3mma-bio-pkg>
+    footer: <https://3mmarand.github.io/eastbio-data-skills>
     margin: 0.07
     code-link: true
 execute:
@@ -18,57 +19,259 @@ bibliography: references.bib
 
 ## Summary
 
-- who am i
+-   About me
 
-- background
+-   Reproducibility, Why script?
 
-- no one wants to learn to code
+-   About you
 
+-   Key, often untaught, concepts
 
-There are some concepts which are essential for building bioinformatic skills but which are rarely covered - or mentioned - in a biology degree. 
--   file systems, 
--   working directories, paths and 
--   computational workflow, 
-
-and not knowing about them makes learning any bioinformatics really hard! In this talk I will explain what these are before giving you an overview of the core ideas and key steps which are common to a variety of bioinformatic analyses. Finally, I'll share some tips and resources for competency.
-
-## Learning Objectives {.smaller}
-
-by the end of this session you will able to:
+-   Roadmap to competency
 
 
+# About me
 
+## About me
 
+-   Senior Lecture in Department of Biology, University of York  
 
+-   Data Science and reproducibility in the Biosciences: especially 'omics
 
-## Be nice to future you
+-   [Software Sustainability Institute](https://www.software.ac.uk/) Fellow  
 
-![Future self: CC-BY-NC, by Julen Colomb, derived from Randall Munroe cartoon](images/future_you.png){fig-alt="Person working at a computer with an offstage person asking \"How is the analysis going?\" The person at the computer replies \"Can't understand the data...and the data collector does not answer my emails or calls\" Person offstage: \"That's terrible! So cruel! Who did collect the data? I will sack them!\" Person at the computer: \"um...I did, 3 years ago\""}
+-   [R Forwards](https://forwards.github.io/) Core team
 
-## To avoid
+-   Project lead [Cloud-SPAN](https://cloud-span.york.ac.uk/) 
 
-<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="480" height="277" frameBorder="0" class="giphy-embed" allowFullScreen>
-
-</iframe>
-
-<p>
-
-<a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a>
-
-</p>
+![R Forwards](images/rforwards.png){fig-alt="logo for R Forwards" width=200px}
+![Cloud-SPAN](images/transparent-cloud-only.PNG){fig-alt="Cloud-SPAN"  width=350px}
 
 
 
-## End
+
+## About me
+
+-   Teach data analysis and reproducibility in analytic pipelines predominantly to those who do not see themselves as programmers
+
+-   Training Early Career Researchers  
+
+-   Encourage people to code
+
+-   Promote programming competence as learned, not innate
 
 
-Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+
+
+# Why script?
+
+
+## Reproducibility is key!
+
+
+-   *"... obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis."*. [@nationalacademiesofsciences2019]
+
+Also see 
+
+-   The Turing Way "Definitions for Reproducibility"  [@community2022]
+
+
+
+## Reproducibility is key!
+
+
+[![The Turing Way\'s definitions of reproducible research
+](images/reproducible-matrix.jpg){fig-alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"}](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions)
+
+
+
+
+## You are your first collaborator!
+
+![futureself, CC-BY-NC, by Julen
+Colomb](images/future_you.png){fig-alt="Person working at a computer with an offstage person asking 'How is the analysis going?' The person at the computer replies 'Can't understand the date...and the data collector does not answer my emails or calls' Person offstage: 'That's terrible! So cruel! Who did collect the data? I will sack them!' Person at the computer: 'um...I did, 3 years ago.'"
+width="400"}
+
+
+## Why does it matter?
+
+-   Five selfish reasons to work reproducibly [@markowetz2015].
+    Alternatively, see the very entertaining
+    [talk](https://youtu.be/yVT07Sukv9Q)
+
+-   Many high profile cases of work which did not reproduce e.g. Anil
+    Potti unravelled by @baggerly2009
+
+-   **Will** become standard in Science and publishing e.g OECD Global
+    Science Forum Building digital workforce capacity and skills for
+    data-intensive science [@oecdglobalscienceforum2020]
+
+## It's science!
+
+<iframe src="https://giphy.com/embed/qCj1NK1rxtnna" width="650" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/transparent-qCj1NK1rxtnna">via GIPHY</a></p>
+
+## Be nice to future you!
+
+
+<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="650" height="277" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a></p>
+
+  
+
+## About you!
+
+Go to https://www.menti.com/ and enter code 2172 3625
+
+
+![QR code](images/mentimeter_qr_code_1.png){}
+
+## You are not alone!
+
+Expectations of Stage 1 Biologists about Data Analysis.
+
+Responses to the question *"I will enjoy data analysis"*
+
+![Likert response](images/enjoy_2018.png){fig-alt="figure for a likert scale question, with the options: Definitely Disagree, Probably Disagree, Neutral, Probably Agree, Definitely Agree. 70% of responses Definitely or Probably Disagree categories. 16% are nuetral"}
+
+
+
+## You are not alone!
+
+
+"*Nobody wants to learn to code. They just want to kick ass*."
+
+
+![James Long rstudio::conf 2019. Putting empathy in action Building a 'community of practice' for analytics in a global corporation.](images/james-long.png){fig-alt="Picture of James with a beard and wearing a cap"}
+
+
+
+
+
+
+
+
+## I don't do *any* coding...
+
+
+..and I'm not about to start!
+
+
+
+You can still make steps towards reproducibility
+
+-   Organise your data [@JSSv059i10; @Broman2018-vt]
+
+-   Describe your data with metadata
+
+-   Use a Project-oriented workflow with file and folder structure
+
+-   Name things carefully
+
+## Organise your data
+
+
+
+## Metadata
+
+
+
+## Project-oriented workflow
+
+-   use folders to organise your work
+
+-   you are aiming for structured, systematic and repeatable.
+
+-   inputs and outputs should be clearly identifiable from structure
+    and/or naming
+
+## Example
+
+```         
+-- liver_transcriptome/
+   |__data
+      |__raw/
+      |__processed/
+   |__images/
+   |__code/
+   |__reports/
+   |__figures/
+```
+
+## Naming things
+
+![documents, CC-BY-NC,
+https://xkcd.com/1459/](images/xkcd-comic-file-names.png){fig-alt="A comic figure is looking over the shoulder of another and is shocked by a list of files with names like 'Untitled 138 copy.docx' and 'Untitled 243.doc'. Caption: 'Protip: Never look in someone else's documents folder'"}
+
+## Naming things
+
+Guiding principle - Have a convention! Good file names are:
+
+-   machine readable
+
+-   human readable
+
+-   play nicely with sorting
+
+## I suggest
+
+-   no spaces in names
+
+-   use snake_case or kebab-case rather than CamelCase or dot.case
+
+-   use all lower case except very occasionally where convention is
+    otherwise, e.g., README, LICENSE
+
+-   ordering: use left-padded numbers e.g., 01, 02....99 or 001,
+    002....999
+
+-   dates [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
+    2020-10-16
+
+-   write down your conventions
+
+##
+
+```         
+-- liver_transcriptome/
+   |__data
+      |__raw/
+         |__2022-03-21_donor_1.csv
+         |__2022-03-21_donor_2.csv
+         |__2022-03-21_donor_3.csv
+         |__2022-05-14_donor_1.csv
+         |__2022-05-14_donor_2.csv
+         |__2022-05-14_donor_3.csv
+      |__processed/
+   |__images/
+   |__code/
+      |__functions/
+         |__summarise.R
+         |__normalise.R
+         |__theme_volcano.R
+      |__01_data_processing.py
+      |__02_exploratory.R
+      |__03_modelling.R
+      |__04_figures.R
+   |__reports/
+      |__01_report.qmd
+      |__02_supplementary.qmd
+   |__figures/
+      |__01_volcano_donor_1_vs_donor_2.eps
+      |__02_volcano_donor_1_vs_donor_3.eps
+```
+
+
+## Summary
+
+## 
+
+-   Made with R [@R-core], Quarto [@allaire2022], `knitr` [@knitr],
+`kableExtra` [@kableExtra]
+
+-   Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
-
-
-## Summary {.smaller}
 
 
 
-## References {.smaller}
+
+## References 

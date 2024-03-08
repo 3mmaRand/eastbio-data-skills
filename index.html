@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.543">
 
   <meta name="author" content="Emma Rand, University of York">
-  <title>Bioinformatics: some easy wins and a roadmap to competency</title>
+  <title>Bioinformatics:</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -328,7 +348,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Bioinformatics: some easy wins and a roadmap to competency</h1>
+  <h1 class="title">Bioinformatics:</h1>
+  <p class="subtitle">Some easy wins and a roadmap to competency</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,44 +363,246 @@ Emma Rand, University of York
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <ul>
-<li><p>who am i</p></li>
-<li><p>background</p></li>
-<li><p>no one wants to learn to code</p></li>
+<li><p>About me</p></li>
+<li><p>Reproducibility, Why script?</p></li>
+<li><p>About you</p></li>
+<li><p>Key, often untaught, concepts</p></li>
+<li><p>Roadmap to competency</p></li>
 </ul>
-<p>There are some concepts which are essential for building bioinformatic skills but which are rarely covered - or mentioned - in a biology degree. - file systems, - working directories, paths and - computational workflow,</p>
-<p>and not knowing about them makes learning any bioinformatics really hard! In this talk I will explain what these are before giving you an overview of the core ideas and key steps which are common to a variety of bioinformatic analyses. Finally, I’ll share some tips and resources for competency.</p>
 </section>
-<section id="learning-objectives" class="slide level2 smaller">
-<h2>Learning Objectives</h2>
-<p>by the end of this session you will able to:</p>
-</section>
-<section id="be-nice-to-future-you" class="slide level2">
-<h2>Be nice to future you</h2>
+<section>
+<section id="about-me" class="title-slide slide level1 center">
+<h1>About me</h1>
 
-<img data-src="images/future_you.png" alt="Person working at a computer with an offstage person asking &quot;How is the analysis going?&quot; The person at the computer replies &quot;Can't understand the data...and the data collector does not answer my emails or calls&quot; Person offstage: &quot;That's terrible! So cruel! Who did collect the data? I will sack them!&quot; Person at the computer: &quot;um...I did, 3 years ago&quot;" class="r-stretch quarto-figure-center"><p class="caption">Future self: CC-BY-NC, by Julen Colomb, derived from Randall Munroe cartoon</p></section>
-<section id="to-avoid" class="slide level2">
-<h2>To avoid</h2>
-<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="480" height="277" frameborder="0" class="giphy-embed" allowfullscreen="">
+</section>
+<section id="about-me-1" class="slide level2">
+<h2>About me</h2>
+<ul>
+<li><p>Senior Lecture in Department of Biology, University of York</p></li>
+<li><p>Data Science and reproducibility in the Biosciences: especially ’omics</p></li>
+<li><p><a href="https://www.software.ac.uk/">Software Sustainability Institute</a> Fellow</p></li>
+<li><p><a href="https://forwards.github.io/">R Forwards</a> Core team</p></li>
+<li><p>Project lead <a href="https://cloud-span.york.ac.uk/">Cloud-SPAN</a></p></li>
+</ul>
+<p><img data-src="images/rforwards.png" alt="logo for R Forwards" width="200"> <img data-src="images/transparent-cloud-only.PNG" alt="Cloud-SPAN" width="350"></p>
+</section>
+<section id="about-me-2" class="slide level2">
+<h2>About me</h2>
+<ul>
+<li><p>Teach data analysis and reproducibility in analytic pipelines predominantly to those who do not see themselves as programmers</p></li>
+<li><p>Encourage people to code</p></li>
+<li><p>Promote programming competence as learned, not innate</p></li>
+<li><p>Train Early Career Researchers</p></li>
+</ul>
+</section></section>
+<section>
+<section id="why-script" class="title-slide slide level1 center">
+<h1>Why script?</h1>
+
+</section>
+<section id="reproducibility-is-key" class="slide level2">
+<h2>Reproducibility is key!</h2>
+<p>One definition <em>“… obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis.”</em>. <span class="citation" data-cites="nationalacademiesofsciences2019">(<a href="#/references" role="doc-biblioref" onclick="">National Academies of Sciences et al. 2019</a>)</span></p>
+<p>Also see</p>
+<ul>
+<li>The Turing Way “Definitions for Reproducibility” <span class="citation" data-cites="community2022">(<a href="#/references" role="doc-biblioref" onclick="">Community 2022</a>)</span></li>
+</ul>
+</section>
+<section id="reproducibility-is-key-1" class="slide level2">
+<h2>Reproducibility is key!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions#rr-overview-definitions"><img data-src="images/reproducible-matrix.jpg" alt="Two by Two cell matrix. Columns are Data, either same or different. Rows are Analysis either same or different. Each of cells contain one of the definitions for reproducibility"></a></p>
+<figcaption>The Turing Way's definitions of reproducible research</figcaption>
+</figure>
+</div>
+</section>
+<section id="you-are-your-first-collaborator" class="slide level2">
+<h2>You are your first collaborator!</h2>
+
+<img data-src="images/future_you.png" alt="Person working at a computer with an offstage person asking 'How is the analysis going?' The person at the computer replies 'Can't understand the date...and the data collector does not answer my emails or calls' Person offstage: 'That's terrible! So cruel! Who did collect the data? I will sack them!' Person at the computer: 'um...I did, 3 years ago.'" width="400" class="r-stretch quarto-figure-center"><p class="caption">futureself, CC-BY-NC, by Julen Colomb</p></section>
+<section id="why-does-it-matter" class="slide level2">
+<h2>Why does it matter?</h2>
+<ul>
+<li><p>Five selfish reasons to work reproducibly <span class="citation" data-cites="markowetz2015">(<a href="#/references" role="doc-biblioref" onclick="">Markowetz 2015</a>)</span>. Alternatively, see the very entertaining <a href="https://youtu.be/yVT07Sukv9Q">talk</a></p></li>
+<li><p>Many high profile cases of work which did not reproduce e.g.&nbsp;Anil Potti unravelled by <span class="citation" data-cites="baggerly2009">Baggerly and Coombes (<a href="#/references" role="doc-biblioref" onclick="">2009</a>)</span></p></li>
+<li><p><strong>Will</strong> become standard in Science and publishing e.g OECD Global Science Forum Building digital workforce capacity and skills for data-intensive science <span class="citation" data-cites="oecdglobalscienceforum2020">(<a href="#/references" role="doc-biblioref" onclick="">OECD Global Science Forum 2020</a>)</span></p></li>
+</ul>
+</section>
+<section id="its-science" class="slide level2">
+<h2>It’s science!</h2>
+<iframe src="https://giphy.com/embed/qCj1NK1rxtnna" width="650" height="270" frameborder="0" class="giphy-embed" allowfullscreen="">
 </iframe>
 <p>
-</p><p><a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a></p>
-<p></p>
+<a href="https://giphy.com/gifs/transparent-qCj1NK1rxtnna">via GIPHY</a>
+</p>
 </section>
-<section id="end" class="slide level2">
-<h2>End</h2>
-<p>Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"> <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br></p>
+<section id="be-nice-to-future-you" class="slide level2">
+<h2>Be nice to future you!</h2>
+<iframe src="https://giphy.com/embed/M11UVCRrc0LUk" width="650" height="277" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/M11UVCRrc0LUk">via GIPHY</a>
+</p>
 </section>
-<section id="summary-1" class="slide level2 smaller">
+<section id="about-you" class="slide level2">
+<h2>About you!</h2>
+<p>Go to https://www.menti.com/ and enter code 2172 3625</p>
+
+<img data-src="images/mentimeter_qr_code_1.png" class="r-stretch quarto-figure-center"><p class="caption">QR code</p></section>
+<section id="you-are-not-alone" class="slide level2">
+<h2>You are not alone!</h2>
+<p>Expectations of Stage 1 Biologists about Data Analysis.</p>
+<p>Responses to the question <em>“I will enjoy data analysis”</em></p>
+
+<img data-src="images/enjoy_2018.png" alt="figure for a likert scale question, with the options: Definitely Disagree, Probably Disagree, Neutral, Probably Agree, Definitely Agree. 70% of responses Definitely or Probably Disagree categories. 16% are nuetral" class="r-stretch quarto-figure-center"><p class="caption">Likert response</p></section>
+<section id="you-are-not-alone-1" class="slide level2">
+<h2>You are not alone!</h2>
+<p>“<em>Nobody wants to learn to code. They just want to kick ass</em>.”</p>
+
+<img data-src="images/james-long.png" alt="Picture of James with a beard and wearing a cap" class="r-stretch quarto-figure-center"><p class="caption">James Long rstudio::conf 2019. Putting empathy in action Building a ‘community of practice’ for analytics in a global corporation.</p></section>
+<section id="i-dont-do-any-coding" class="slide level2">
+<h2>I don’t do <em>any</em> coding…</h2>
+<p>..and I’m not about to start!</p>
+<p>You can still make steps towards reproducibility</p>
+<ul>
+<li><p>Organise your data <span class="citation" data-cites="JSSv059i10 Broman2018-vt">(<a href="#/references" role="doc-biblioref" onclick="">Wickham 2014</a>; <a href="#/references" role="doc-biblioref" onclick="">Broman and Woo 2018</a>)</span></p></li>
+<li><p>Describe your data with metadata</p></li>
+<li><p>Use a Project-oriented workflow with file and folder structure</p></li>
+<li><p>Name things carefully</p></li>
+</ul>
+</section>
+<section id="organise-your-data" class="slide level2">
+<h2>Organise your data</h2>
+</section>
+<section id="metadata" class="slide level2">
+<h2>Metadata</h2>
+</section>
+<section id="project-oriented-workflow" class="slide level2">
+<h2>Project-oriented workflow</h2>
+<ul>
+<li><p>use folders to organise your work</p></li>
+<li><p>you are aiming for structured, systematic and repeatable.</p></li>
+<li><p>inputs and outputs should be clearly identifiable from structure and/or naming</p></li>
+</ul>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<pre><code>-- liver_transcriptome/
+   |__data
+      |__raw/
+      |__processed/
+   |__images/
+   |__code/
+   |__reports/
+   |__figures/</code></pre>
+</section>
+<section id="naming-things" class="slide level2">
+<h2>Naming things</h2>
+
+<img data-src="images/xkcd-comic-file-names.png" alt="A comic figure is looking over the shoulder of another and is shocked by a list of files with names like 'Untitled 138 copy.docx' and 'Untitled 243.doc'. Caption: 'Protip: Never look in someone else's documents folder'" class="r-stretch quarto-figure-center"><p class="caption">documents, CC-BY-NC, https://xkcd.com/1459/</p></section>
+<section id="naming-things-1" class="slide level2">
+<h2>Naming things</h2>
+<p>Guiding principle - Have a convention! Good file names are:</p>
+<ul>
+<li><p>machine readable</p></li>
+<li><p>human readable</p></li>
+<li><p>play nicely with sorting</p></li>
+</ul>
+</section>
+<section id="i-suggest" class="slide level2">
+<h2>I suggest</h2>
+<ul>
+<li><p>no spaces in names</p></li>
+<li><p>use snake_case or kebab-case rather than CamelCase or dot.case</p></li>
+<li><p>use all lower case except very occasionally where convention is otherwise, e.g., README, LICENSE</p></li>
+<li><p>ordering: use left-padded numbers e.g., 01, 02….99 or 001, 002….999</p></li>
+<li><p>dates <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format: 2020-10-16</p></li>
+<li><p>write down your conventions</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<pre><code>-- liver_transcriptome/
+   |__data
+      |__raw/
+         |__2022-03-21_donor_1.csv
+         |__2022-03-21_donor_2.csv
+         |__2022-03-21_donor_3.csv
+         |__2022-05-14_donor_1.csv
+         |__2022-05-14_donor_2.csv
+         |__2022-05-14_donor_3.csv
+      |__processed/
+   |__images/
+   |__code/
+      |__functions/
+         |__summarise.R
+         |__normalise.R
+         |__theme_volcano.R
+      |__01_data_processing.py
+      |__02_exploratory.R
+      |__03_modelling.R
+      |__04_figures.R
+   |__reports/
+      |__01_report.qmd
+      |__02_supplementary.qmd
+   |__figures/
+      |__01_volcano_donor_1_vs_donor_2.eps
+      |__02_volcano_donor_1_vs_donor_3.eps</code></pre>
+</section>
+<section id="summary-1" class="slide level2">
 <h2>Summary</h2>
 </section>
-<section id="references" class="slide level2 smaller">
+<section id="section-1" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>Made with R <span class="citation" data-cites="R-core">(<a href="#/references" role="doc-biblioref" onclick="">R Core Team 2023</a>)</span>, Quarto <span class="citation" data-cites="allaire2022">(<a href="#/references" role="doc-biblioref" onclick="">Allaire et al. 2022</a>)</span>, <code>knitr</code> <span class="citation" data-cites="knitr">(<a href="#/references" role="doc-biblioref" onclick="">Xie 2022</a>)</span>, <code>kableExtra</code> <span class="citation" data-cites="kableExtra">(<a href="#/references" role="doc-biblioref" onclick="">Zhu 2021</a>)</span></p></li>
+<li><p>Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a></p></li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+</a></ul><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+</a></section><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+</a><section id="references" class="slide level2 smaller scrollable"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
 <h2>References</h2>
-<div class="quarto-auto-generated-content">
-<div class="footer footer-default">
-<p><a href="https://bit.ly/3mma-bio-pkg" class="uri">https://bit.ly/3mma-bio-pkg</a></p>
+</a><div class="quarto-auto-generated-content"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+</a><div class="footer footer-default"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+</a><p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a><a href="https://3mmarand.github.io/eastbio-data-skills" class="uri">https://3mmarand.github.io/eastbio-data-skills</a></p>
 </div>
 </div>
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-allaire2022" class="csl-entry" role="listitem">
+Allaire, J. J., Charles Teague, Carlos Scheidegger, Yihui Xie, and Christophe Dervieux. 2022. <em>Quarto</em>. <a href="https://doi.org/10.5281/zenodo.5960048">https://doi.org/10.5281/zenodo.5960048</a>.
+</div>
+<div id="ref-baggerly2009" class="csl-entry" role="listitem">
+Baggerly, Keith A, and Kevin R Coombes. 2009. <span>“DERIVING CHEMOSENSITIVITY FROM CELL LINES: FORENSIC BIOINFORMATICS AND REPRODUCIBLE RESEARCH IN HIGH-THROUGHPUT BIOLOGY.”</span> <em>Ann. Appl. Stat.</em> 3 (4): 1309–34. <a href="https://doi.org/10.2307/27801549">https://doi.org/10.2307/27801549</a>.
+</div>
+<div id="ref-Broman2018-vt" class="csl-entry" role="listitem">
+Broman, Karl W, and Kara H Woo. 2018. <span>“Data Organization in Spreadsheets.”</span> <em>Am. Stat.</em> 72 (1): 2–10.
+</div>
+<div id="ref-community2022" class="csl-entry" role="listitem">
+Community, The Turing Way. 2022. <em>The Turing Way: A Handbook for Reproducible, Ethical and Collaborative Research</em>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.3233853">https://doi.org/10.5281/ZENODO.3233853</a>.
+</div>
+<div id="ref-markowetz2015" class="csl-entry" role="listitem">
+Markowetz, Florian. 2015. <span>“Five Selfish Reasons to Work Reproducibly.”</span> <em>Genome Biol.</em> 16 (December): 274. <a href="https://doi.org/10.1186/s13059-015-0850-7">https://doi.org/10.1186/s13059-015-0850-7</a>.
+</div>
+<div id="ref-nationalacademiesofsciences2019" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, Medicine, Policy, Global Affairs, Engineering, Medicine Committee on Science, Public Policy, Board on Research Data, et al. 2019. <em>Understanding Reproducibility and Replicability</em>. National Academies Press (US). <a href="https://www.ncbi.nlm.nih.gov/books/NBK547546/">https://www.ncbi.nlm.nih.gov/books/NBK547546/</a>.
+</div>
+<div id="ref-oecdglobalscienceforum2020" class="csl-entry" role="listitem">
+OECD Global Science Forum. 2020. <span>“Building Digital Workforce Capacity and Skills for Data-Intensive Science.”</span> <a href="http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=DSTI/STP/GSF(2020)6/FINAL&amp;docLanguage=En">http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=DSTI/STP/GSF(2020)6/FINAL&amp;docLanguage=En</a>.
+</div>
+<div id="ref-R-core" class="csl-entry" role="listitem">
+R Core Team. 2023. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-JSSv059i10" class="csl-entry" role="listitem">
+Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (10): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
+</div>
+<div id="ref-knitr" class="csl-entry" role="listitem">
+Xie, Yihui. 2022. <span>“Knitr: A General-Purpose Package for Dynamic Report Generation in r.”</span> <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+<div id="ref-kableExtra" class="csl-entry" role="listitem">
+Zhu, Hao. 2021. <span>“kableExtra: Construct Complex Table with ’Kable’ and Pipe Syntax.”</span> <a href="https://CRAN.R-project.org/package=kableExtra">https://CRAN.R-project.org/package=kableExtra</a>.
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
